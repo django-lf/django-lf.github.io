@@ -1,0 +1,109 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-width: 500px;
+    min-height: 500px;
+    overflow: hidden;
+    background-color: #ffc5b3;
+    background-image: radial-gradient(#ffeded, #ffc7c7);
+}
+
+.heart {
+    position: absolute;
+    width: 100px;
+    height: 90px;
+    top: 30%;
+    left: 50%;
+    margin-top: -45px;
+    margin-left: -50px;
+}
+
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background-color:#cc2a5d;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+.heart2 {
+    animation: pounding .5s linear infinite alternate;
+}
+
+@keyframes pounding {
+    0% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(3);
+    }
+}
+
+#clock .digit {
+    font-size: 64px;
+}
+
+#clock-box {
+    position: absolute;
+    left: 20%;
+    top: 80%;
+    font-size: 28px;
+}
+
+#clock-box a {
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.textCon .item{
+    position: absolute;
+    opacity: 0;
+    background-color:#cc2a5d;
+    transform: rotate(45deg);
+    animation: hearts 3s ease-in infinite;
+}
+.textCon .item::before,
+.textCon .item::after{
+    content:'';
+    width:100%;
+    height:100%;
+    background-color:#cc2a5d;
+    position: absolute;
+    top:0;
+    left:0;
+    border-radius: 50%;
+}
+.textCon .item::before{
+    transform: translateX(-50%);
+}
+.textCon .item::after{
+    transform: translateY(-50%);
+}
+@keyframes hearts{
+    0%{
+        opacity: 0;
+        transform: translateY(0%) rotate(45deg);
+    }
+    20%{
+        opacity: 0.8;
+        transform: translateY(-20%) rotate(45deg);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-1000%) rotate(45deg);
+    }
+}

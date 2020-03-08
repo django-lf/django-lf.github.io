@@ -3,102 +3,40 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>心动</title>
-    <script type="text/javascript" src="./css/jquery.min.js"></script>
-    <script type="text/javascript" src="./css/jscex.min.js"></script>
-    <script type="text/javascript" src="./css/jscex-parser.js"></script>
-    <script type="text/javascript" src="./css/jscex-jit.js"></script>
-    <script type="text/javascript" src="./css/jscex-builderbase.min.js"></script>
-    <script type="text/javascript" src="./css/jscex-async.min.js"></script>
-    <script type="text/javascript" src="./css/jscex-async-powerpack.min.js"></script>
-    <style type="text/css">
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-            min-width: 500px;
-            min-height: 500px;
-            overflow: hidden;
-        }
-
-        .heart {
-            position: absolute;
-            width: 100px;
-            height: 90px;
-            top: 30%;
-            left: 50%;
-            margin-top: -45px;
-            margin-left: -50px;
-        }
-
-        .heart:before,
-        .heart:after {
-            position: absolute;
-            content: "";
-            left: 50px;
-            top: 0;
-            width: 50px;
-            height: 80px;
-            background: #fc2e5a;
-            border-radius: 50px 50px 0 0;
-            transform: rotate(-45deg);
-            transform-origin: 0 100%;
-        }
-
-        .heart:after {
-            left: 0;
-            transform: rotate(45deg);
-            transform-origin: 100% 100%;
-        }
-
-        .heart2 {
-            animation: pounding .5s linear infinite alternate;
-        }
-
-        @keyframes pounding {
-            0% {
-                transform: scale(3);
-            }
-
-            100% {
-                transform: scale(2);
-            }
-        }
-
-        #clock .digit {
-            font-size: 64px;
-        }
-        #clock-box {position:absolute;left:20%;top:80%;font-size:28px;}
-        #clock-box a {font-size:28px;text-decoration:none;}
-    </style>
+    <title>永远爱你</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <div class="heart heart2"></div>
-    <div>
+    <div class='textCon'>
+        <div class="heart heart2"></div>
         <div id='code'>
             <div id="clock-box">
                 <font color="#FF873F">
                     和小凡凡在一起的
-                <div id="clock"></div>
+                    <div id="clock"></div>
                 </font>
             </div>
         </div>
     </div>
 </body>
+<script src="js/bg_love.js"></script>
+<script src="js/love.js"></script>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/jscex.min.js"></script>
+<script type="text/javascript" src="./js/jscex-parser.js"></script>
+<script type="text/javascript" src="./js/jscex-jit.js"></script>
+<script type="text/javascript" src="./js/jscex-builderbase.min.js"></script>
+<script type="text/javascript" src="./js/jscex-async.min.js"></script>
+<script type="text/javascript" src="./js/jscex-async-powerpack.min.js"></script>
 <script type="text/javascript">
     (function ($) {
         $.fn.typewriter = function () {
             this.each(function () {
                 var $ele = $(this), str = $ele.html().trim(), progress = 0;
                 $ele.html('');
-                console.log("str")
-                console.log(str)
                 var timer = setInterval(function () {
                     var current = str.substr(progress, 1)
-                    // console.log("current")
-                    // console.log(current)
-                    // console.log(progress)
                     if (current != '') { }
                     if (current == '<') {
                         progress = str.indexOf('>', progress) + 1;
@@ -117,7 +55,6 @@
     function timeElapse(date) {
         var current = Date();
         var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
-        console.log(current,date,seconds)
         var days = Math.floor(seconds / (3600 * 24));
         seconds = seconds % (3600 * 24);
         var hours = Math.floor(seconds / 3600);
@@ -155,6 +92,7 @@
 
         textAnimate().start();
     }())
+
 </script>
 
 </html>
