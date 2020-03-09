@@ -6,7 +6,7 @@ body {
     min-height: 500px;
     overflow: hidden;
     background-color: #ffc5b3;
-    background-image: radial-gradient(#ffeded, #ffc7c7);
+    background-image: radial-gradient(#ffeded, #facdcd);
 }
 
 .heart {
@@ -27,18 +27,33 @@ body {
     top: 0;
     width: 50px;
     height: 80px;
-    background-color:#cc2a5d;
+    background: #cc2a5d;
+    -moz-border-radius: 50px 50px 0 0;
     border-radius: 50px 50px 0 0;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
+    -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+        -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+        -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
 }
-
 .heart:after {
     left: 0;
-    transform: rotate(45deg);
-    transform-origin: 100% 100%;
+    -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+        -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+        -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
 }
-
 .heart2 {
     animation: pounding .5s linear infinite alternate;
 }
