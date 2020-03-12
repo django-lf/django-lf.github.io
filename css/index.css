@@ -79,7 +79,13 @@ body {
     font-size: 35px;
 }
 @media screen and (max-width: 1000px) { 
-    #clock-box {font-size: 45px;top:85%} 
+    #clock-box {
+        font-size: 45px;
+        top:85%
+    }
+    #clock .digit {
+        font-size: 78px;
+    } 
 }
 
 #clock-box a {
