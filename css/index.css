@@ -75,8 +75,11 @@ body {
 #clock-box {
     position: absolute;
     left: 20%;
-    top: 80%;
-    font-size: 28px;
+    top: 75%;
+    font-size: 35px;
+}
+@media screen and (max-width: 1000px) { 
+    #clock-box {font-size: 45px;top:85%} 
 }
 
 #clock-box a {
